@@ -65,7 +65,7 @@ nav a {
 }
 
 .logo img {
-  border-radius: 35% 8% 35% 7% / 35% 7% 35% 8% 
+  border-radius: 51% 49% 48% 50% / 26% 54% 55% 75% /* 35% 8% 35% 7% / 35% 7% 35% 8% */
 }
 
 .left-links,
@@ -241,6 +241,10 @@ h1 {
 nav a:hover,
 nav a:focus,
 nav a:active,
+nav button:hover,
+nav button:active,
+/* .menu img:hover,
+.menu img:active, */
 .filter:active {
   color: var(--text-color);
 }
