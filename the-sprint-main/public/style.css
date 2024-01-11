@@ -14,6 +14,7 @@ body {
 
 :root {
   --primary-color: #84BC2D;
+  --text-color: #41453b;
 }
 
 .heading,
@@ -36,13 +37,14 @@ nav {
   font-family: proxima-nova, sans-serif;
 }
 
-/* .menu {
-  text-align: start;
+.menu {
+  display: flex;
+  align-items: center;
 }
 
-.contact {
-  text-align: end;
-} */
+.menu img {
+  margin-right: 0.5rem;
+}
 
 .left-links,
 .right-links {
@@ -67,16 +69,15 @@ nav a {
 }
 
 h1 {
-  max-width: 720px;
   font-size: 2.5rem;
   margin: 0 18px 2.875rem;
 }
 
 .intro {
-  margin: 0 18px;
+  margin: 0 18px 2rem;
   font-size: 120%;
   font-weight: 700;
-  max-width: 720px;
+  line-height: 1.5em;
 }
 
 li {
@@ -85,13 +86,37 @@ li {
 
 .people {
   display: grid;
-  grid-gap: 1rem;
+  grid-gap: 2rem;
   grid-template-columns: repeat(auto-fill,minmax(158px,1fr));
   max-width: 1440px;
+  padding: 0 18px;
+  margin-bottom: 76px; 
+}
+
+.people li {
+  /* max-width: 240px; */
+  /* background: lightgrey; */
+}
+
+.people .first-name {
+  font-family: proxima-nova, sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  color: var(--text-color);
+}
+
+.people .email {
+  font-family: ff-tisa-sans-web-pro,sans-serif;
+  /* font-weight: 700; */
+  text-decoration: none;
+  color: var(--primary-color);
+  font-size: 120%;
+  line-height: 1.5em;
 }
 
 .tags {
-  margin: 0 18px;
+  margin: 0 18px 2rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -105,6 +130,8 @@ li {
   color: var(--primary-color);
   background: none;
   border: none;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
 }
 
 .tags-small-screen {
@@ -127,15 +154,17 @@ li {
   margin: 2px;
   padding: 6px;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .person {
-  height: 180px;
+  height: 80%;
+  width: 100%;
   object-fit: cover;
+  /* border-radius: 100% 43% 93% 34% / 93% 81% 93% 78% ; */
 }
 
-.tags {
+.content {
   max-width: 720px;
 }
 
@@ -143,6 +172,10 @@ li {
   nav {
     margin: 0 auto;
     /* padding: 36px 18px 76px; */
+  }
+
+  .logo {
+    margin: 0 1rem;
   }
 
   .menu {
@@ -169,12 +202,18 @@ li {
     display: none;
   }
 
-  h1,
-  .intro,
-  .tags,
-  .people {
-    margin: 0 auto;
+  h1 {
+    font-size: 52.358px;
+  }
+
+  .content {
+    margin: 0 auto 76px;
     padding: 0 18px;
+  }
+
+  .people {
+    grid-template-columns: repeat(auto-fill,minmax(225px,1fr));
+    margin: 0 auto 76px;
   }
 
   .filter {
@@ -183,5 +222,11 @@ li {
 
   .tags-small-screen {
     display: flex;
+  }
+}
+
+@media (min-width: 720px) {
+  .people {
+    padding: 0 2rem;
   }
 }
