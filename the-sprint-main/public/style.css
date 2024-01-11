@@ -30,8 +30,10 @@ h5 {
 nav {
   display: flex;
   justify-content: space-between;
+  max-width: 720px;
   align-items: center;
   padding: 36px 18px 46px;
+  font-family: proxima-nova, sans-serif;
 }
 
 /* .menu {
@@ -47,7 +49,9 @@ nav {
   display: none;
 }
 
-nav button {
+nav button,
+.left-links,
+.right-links {
   color: var(--primary-color);
   border: none;
   background: none;
@@ -59,9 +63,11 @@ nav button {
 
 nav a {
   color: var(--primary-color);
+  text-decoration: none;
 }
 
 h1 {
+  max-width: 720px;
   font-size: 2.5rem;
   margin: 0 18px 2.875rem;
 }
@@ -70,6 +76,7 @@ h1 {
   margin: 0 18px;
   font-size: 120%;
   font-weight: 700;
+  max-width: 720px;
 }
 
 li {
@@ -85,24 +92,42 @@ li {
 
 .tags {
   margin: 0 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .filter {
+  text-align: start;
   font-family: proxima-nova, sans-serif;
   font-size: 16px;
   font-weight: 900;
   color: var(--primary-color);
   background: none;
   border: none;
-
 }
 
 .tags-small-screen {
   display: none;
+  flex-wrap: wrap;
 }
 
 .tags-small-screen.show {
-  display: inline;
+  display: flex;
+}
+
+.tags-small-screen button {
+  flex-grow: 1;
+  background-color: #d1d9be;
+  border: none;
+  border-radius: 3px;
+  color: #7f9054;
+  font-family: ff-tisa-sans-web-pro, sans-serif;
+  font-weight: 700;
+  margin: 2px;
+  padding: 6px;
+  text-decoration: none;
+  font-size: 16px;
 }
 
 .person {
@@ -111,6 +136,52 @@ li {
 }
 
 .tags {
-  grid-column: 1/-1 ;
+  max-width: 720px;
+}
 
+@media (min-width: 601px) {
+  nav {
+    margin: 0 auto;
+    /* padding: 36px 18px 76px; */
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .left-links {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+  }
+
+  .right-links {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+  }
+
+  .right-links li:nth-child(3) {
+    padding-right: 32px;
+  }
+
+  .contact {
+    display: none;
+  }
+
+  h1,
+  .intro,
+  .tags,
+  .people {
+    margin: 0 auto;
+    padding: 0 18px;
+  }
+
+  .filter {
+    display: none;
+  }
+
+  .tags-small-screen {
+    display: flex;
+  }
 }
