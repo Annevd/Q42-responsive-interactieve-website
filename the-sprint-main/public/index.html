@@ -99,6 +99,7 @@
     />
     <link rel="stylesheet" href="style.css" />
     <script type="module" src="main.js" async></script>
+    <script src="https://storage.googleapis.com/static.q42.nl/q42.js" async></script>
 
     <title>Onze mensen | Q42</title>
 
@@ -106,7 +107,7 @@
       @font-face {
         font-family: "ff-tisa-sans-web-pro";
         font-display: swap;
-        src: url("/fonts/tisa-sans-web-pro-700.woff2") format("woff2");
+        src: url("./fonts/tisa-sans-web-pro-700.woff2") format("woff2");
         font-weight: 700;
         font-style: normal;
       }
@@ -114,7 +115,7 @@
       @font-face {
         font-family: "ff-tisa-sans-web-pro";
         font-display: swap;
-        src: url("/fonts/tisa-sans-web-pro-400.woff2") format("woff2");
+        src: url("./fonts/tisa-sans-web-pro-400.woff2") format("woff2");
         font-weight: 400;
         font-style: normal;
       }
@@ -122,7 +123,7 @@
       @font-face {
         font-family: "ff-tisa-sans-web-pro";
         font-display: swap;
-        src: url("/fonts/tisa-sans-web-pro-400-italic.woff2") format("woff2");
+        src: url("./fonts/tisa-sans-web-pro-400-italic.woff2") format("woff2");
         font-weight: 400;
         font-style: italic;
       }
@@ -138,7 +139,7 @@
       @font-face {
         font-family: "proxima-nova";
         font-display: swap;
-        src: url("/fonts/proxima-nova-900.woff2") format("woff2");
+        src: url("./fonts/proxima-nova-900.woff2") format("woff2");
         font-weight: 900;
         font-style: normal;
       }
@@ -146,7 +147,7 @@
       @font-face {
         font-family: "proxima-nova";
         font-display: fallback;
-        src: url("/fonts/proxima-nova-300.woff2") format("woff2");
+        src: url("./fonts/proxima-nova-300.woff2") format("woff2");
         font-weight: 300;
         font-style: normal;
       }
@@ -164,12 +165,10 @@
         <li><a href="#">Werk</a></li>
         <li><a href="#">Ventures</a></li>
       </ul>
-      <div class="logo">
-        <a href="index.html"><img src="./images/touch-icon-57x57-precomposed.png"></a>
-      </div>
+      <a href="https://www.q42.nl/"><div><q42 class="logo"></q42></div></a>
       <ul class="right-links">
         <li><a href="#">Over</a></li>
-        <li><a href="#">Mensen</a></li>
+        <li><a href="index.html">Mensen</a></li>
         <li><a href="#">Nieuws</a></li>
       </ul>
       <div>
@@ -188,11 +187,12 @@
       <li class="tags content">
         <button class="filter">Filter +</button>
         <div class="tags-small-screen">
+          <button>Alles</button>
           <button>Short hair don't care</button>
           <button>Is stiekem een designer</button>
           <button>Partner van de club</button>
-          <button>Harry Potter fan</button>
           <button>Front-end</button>
+          <button>Harry Potter fan</button>
         </div>
       </li>
     </ul>
@@ -202,16 +202,16 @@
       <li class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <img src="./images/people/anne.jpg" class="person">
+            <img src="./images/people/anne.jpg" class="person" alt="profielfoto">
             <p class="first-name">Anne</p>
             <a href="mailto:Anne anne@q42.nl>" class="email">anne@q42.nl</a>
           </div>
           <!-- <div class="card-front-overlay"></div> -->
           <div class="flip-card-back">
-            <img src="./images/people/fallback.jpeg" class="person">
+            <img src="./images/people/fallback.jpeg" class="person" alt="profielfoto">
             <p class="first-name">Anne</p>
-            <button>Front-end</button>
-            <button>Harry Potter fan</button>
+            <span>Front-end</span>
+            <span>Harry Potter fan</span>
           </div>
         </div>
       </li>
@@ -219,15 +219,15 @@
       <li class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <img src="./images/people/bart.jpg" class="person">
+            <img src="./images/people/bart.jpg" class="person" alt="profielfoto">
             <p class="first-name">Bart</p>
             <a href="mailto:Bart bart@q42.nl>" class="email">bart@q42.nl</a>
           </div>
           <!-- <div class="card-front-overlay"></div> -->
           <div class="flip-card-back">
-            <img src="./images/people/bart_art.jpeg" class="person">
+            <img src="./images/people/bart_art.jpeg" class="person" alt="profielfoto">
             <p class="first-name">Bart</p>
-            <button>Short hair don't care</button>
+            <span>Short hair don't care</span>
           </div>
         </div>
       </li>
@@ -235,15 +235,15 @@
       <li class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <img src="./images/people/benny.jpg" class="person">
+            <img src="./images/people/benny.jpg" class="person" alt="profielfoto">
             <p class="first-name">Benny</p>
             <a href="mailto:Benny benny@q42.nl>" class="email">benny@q42.nl</a>
           </div>
           <!-- <div class="card-front-overlay"></div> -->
           <div class="flip-card-back">
-            <img src="./images/people/fallback.jpeg" class="person">
+            <img src="./images/people/fallback.jpeg" class="person" alt="profielfoto">
             <p class="first-name">Benny</p>
-            <button>Short hair don't care</button>
+            <span>Short hair don't care</span>
           </div>
         </div>
       </li>
@@ -251,15 +251,15 @@
       <li class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <img src="./images/people/bob.jpg" class="person">
+            <img src="./images/people/bob.jpg" class="person" alt="profielfoto">
             <p class="first-name">Bob</p>
             <a href="mailto:Bob bob@q42.nl>" class="email">bob@q42.nl</a>
           </div>
           <!-- <div class="card-front-overlay"></div> -->
           <div class="flip-card-back">
-            <img src="./images/people/bob_art.jpeg" class="person">
+            <img src="./images/people/bob_art.jpeg" class="person" alt="profielfoto">
             <p class="first-name">Bob</p>
-            <button>Front-end</button>
+            <span>Front-end</span>
           </div>
         </div>
       </li>
@@ -267,15 +267,15 @@
       <li class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <img src="./images/people/chris.jpg" class="person">
+            <img src="./images/people/chris.jpg" class="person" alt="profielfoto">
             <p class="first-name">Chris</p>
             <a href="mailto:Chris chris@q42.nl>" class="email">chris@q42.nl</a>
           </div>
           <!-- <div class="card-front-overlay"></div> -->
           <div class="flip-card-back">
-            <img src="./images/people/chris_art.jpeg" class="person">
+            <img src="./images/people/chris_art.jpeg" class="person" alt="profielfoto">
             <p class="first-name">Chris</p>
-            <button>Partner van de club</button>
+            <span>Partner van de club</span>
           </div>
         </div>
       </li>
@@ -283,16 +283,16 @@
       <li class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <img src="./images/people/djovanni.jpg" class="person">
+            <img src="./images/people/djovanni.jpg" class="person" alt="profielfoto">
             <p class="first-name">Djovanni</p>
             <a href="mailto:Djovanni djovanni@q42.nl>" class="email">djovanni@q42.nl</a>
           </div>
           <!-- <div class="card-front-overlay"></div> -->
           <div class="flip-card-back">
-            <img src="./images/people/djovanni_art.jpeg" class="person">
+            <img src="./images/people/djovanni_art.jpeg" class="person" alt="profielfoto">
             <p class="first-name">Djovanni</p>
-            <button>Front-end</button>
-            <button>Harry Potter fan</button>
+            <span>Front-end</span>
+            <span>Harry Potter fan</span>
           </div>
         </div>
       </li>
@@ -300,15 +300,15 @@
       <li class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <img src="./images/people/jan-jouke.jpg" class="person">
+            <img src="./images/people/jan-jouke.jpg" class="person" alt="profielfoto">
             <p class="first-name">Jan-jouke</p>
             <a href="mailto:Jan-Jouke janjouke@q42.nl>" class="email">janjouke@q42.nl</a>
           </div>
           <!-- <div class="card-front-overlay"></div> -->
           <div class="flip-card-back">
-            <img src="./images/people/jan-jouke_art.jpeg" class="person">
+            <img src="./images/people/jan-jouke_art.jpeg" class="person" alt="profielfoto">
             <p class="first-name">Jan-Jouke</p>
-            <button>Partner van de club</button>
+            <span>Partner van de club</span>
           </div>
         </div>
       </li>
@@ -316,15 +316,15 @@
       <li class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <img src="./images/people/jasper.jpg"class="person">
+            <img src="./images/people/jasper.jpg"class="person" alt="profielfoto">
             <p class="first-name">Jasper</p>
             <a href="mailto:Jasper jasper@q42.nl>" class="email">jasper@q42.nl</a>
           </div>
           <!-- <div class="card-front-overlay"></div> -->
           <div class="flip-card-back">
-            <img src="./images/people/fallback.jpeg" class="person">
+            <img src="./images/people/fallback.jpeg" class="person" alt="profielfoto">
             <p class="first-name">Jasper</p>
-            <button>Partner van de club</button>
+            <span>Partner van de club</span>
           </div>
         </div>
       </li>
@@ -332,15 +332,15 @@
       <li class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <img src="./images/people/layla.jpg" class="person">
+            <img src="./images/people/layla.jpg" class="person" alt="profielfoto">
             <p class="first-name">Layla</p>
             <a href="mailto:Layla layla@q42.nl>" class="email">layla@q42.nl</a>
           </div>
           <!-- <div class="card-front-overlay"></div> -->
           <div class="flip-card-back">
-            <img src="./images/people/layla_art.jpeg" class="person">
+            <img src="./images/people/layla_art.jpeg" class="person" alt="profielfoto">
             <p class="first-name">Layla</p>
-            <button>Front-end</button>
+            <span>Front-end</span>
           </div>
         </div>
       </li>
@@ -348,15 +348,15 @@
       <li class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <img src="./images/people/mara.jpg" class="person">
+            <img src="./images/people/mara.jpg" class="person" alt="profielfoto">
             <p class="first-name">Mara</p>
             <a href="mailto:Mara mara@q42.nl>" class="email">mara@q42.nl</a>
           </div>
           <!-- <div class="card-front-overlay"></div> -->
           <div class="flip-card-back">
-            <img src="./images/people/mara_art.jpeg" class="person">
+            <img src="./images/people/mara_art.jpeg" class="person" alt="profielfoto">
             <p class="first-name">Mara</p>
-            <button>Harry Potter fan</button>
+            <span>Harry Potter fan</span>
           </div>
         </div>
       </li>

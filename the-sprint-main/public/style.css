@@ -51,7 +51,6 @@ nav a {
   font-size: 16px;
   color: var(--primary-color);
   text-decoration: none;
-  letter-spacing: -1px;
   transition: 0.075s ease-in-out;
 }
 
@@ -64,8 +63,9 @@ nav a {
   margin-right: 0.5rem;
 }
 
-.logo img {
-  border-radius: 51% 49% 48% 50% / 26% 54% 55% 75% /* 35% 8% 35% 7% / 35% 7% 35% 8% */
+.logo {
+  height: 80px;
+  width: 53px;
 }
 
 .left-links,
@@ -133,20 +133,31 @@ h1 {
 
 .tags-small-screen.show {
   display: flex;
+  animation: show-tags 0.1s ease-in-out;
+}
+
+@keyframes show-tags {
+  from {
+    opacity: 0;
+    margin-top: -5%;
+  }
+  to {
+    opacity: 100%;
+    margin-top: 0;
+  }
 }
 
 .tags-small-screen button,
-.flip-card-back button {
+.flip-card-back span {
   flex-grow: 1;
   margin: 2px;
-  padding: 6px;
+  padding: 3px 6px;
   background-color: #d1d9be;
   border: none;
   border-radius: 3px;
   font-family: ff-tisa-sans-web-pro, sans-serif;
-  /* font-weight: 700; */
   text-decoration: none;
-  font-size: 18px;
+  font-size: 16px;
   color: var(--secundary-color);
   cursor: pointer;
   transition: 0.075s ease-in-out;
@@ -198,10 +209,6 @@ h1 {
 }
 
 /* Flip card hover */
-
-.flip-card button {
-  cursor: default;
-}
 
 .flip-card-inner {
   display: grid;
