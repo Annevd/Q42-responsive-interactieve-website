@@ -1,9 +1,14 @@
 // Laat filters wel of niet zien
 const filterButton = document.querySelector(".filter")
 const showTags = document.querySelector(".tags-small-screen")
+const hideFilter = document.querySelector(".hide-filter")
+const showFilter = document.querySelector(".show-filter")
+
 
 filterButton.addEventListener("click", function() {
-    showTags.classList.toggle("show");
+    showTags.classList.toggle("show"); // toggled de filters
+    hideFilter.classList.toggle("show"); // laat minnetje zien naast filter als je de filters open heb staan
+  showFilter.classList.toggle("hide"); // laat plusje zien naast filter als je de filters dicht heb staan
   });
 
 // Filter
