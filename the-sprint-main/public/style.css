@@ -243,6 +243,12 @@ h1 {
   rotate: y 360deg;
 }
 
+/* class om filters in JS te hiden/showen */
+
+.hidden {
+  display: none;
+}
+
 /* Hovers, focus & active*/
 
 nav a:hover,
