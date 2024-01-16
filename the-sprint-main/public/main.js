@@ -1,4 +1,5 @@
 // Laat filters wel of niet zien
+
 const filterButton = document.querySelector(".filter")
 const showTags = document.querySelector(".tags-small-screen")
 const hideFilter = document.querySelector(".hide-filter")
@@ -9,9 +10,11 @@ filterButton.addEventListener("click", function() {
     showTags.classList.toggle("show"); // toggled de filters
     hideFilter.classList.toggle("show"); // laat minnetje zien naast filter als je de filters open heb staan
   showFilter.classList.toggle("hide"); // laat plusje zien naast filter als je de filters dicht heb staan
-  });
+});
+
 
 // Filter
+
 const filterButtons = document.querySelectorAll('.filter-option');  // Selecteert alle elementen met de class 'filter-option'
 
 filterButtons.forEach(button => { // Voegt een click eventlistener toe aan alle filter tags
@@ -30,3 +33,21 @@ people.forEach(person => { // Loop door alle mensen heen
   }
 });
 }
+
+
+// Flip card
+
+const flipCards = document.querySelectorAll('.flip-card');
+
+  flipCards.forEach(function (card) { // Voegt een click eventlistener toe aan alle flip cards
+
+    const personImage = card.querySelector('.person'); // selecteert de foto in de card
+
+    personImage.addEventListener('mouseenter', function () { // Luistert naar de funcite zodra je muis de foto 'binnendringt'
+      card.classList.add('hover'); // Voegt de hover class toe om te kunnen flippen
+    });
+
+    card.addEventListener('mouseleave', function () { // Als je muis buiten de foto komt, wordt de hover class weer weggehaald zodat hij terugflipt
+      card.classList.remove('hover');
+    });
+  });

@@ -16,7 +16,9 @@ body {
   --primary-color: #84BC2D;
   --secundary-color:#7f9054;
   --tertiary-color: #f3f5ee;
-  --text-color: 	#212121;
+  --text-color: #212121;
+  --background-color-01: #d1d9be;
+  --transition-01: 0.075s ease-in-out;
 }
 
 /* Algemene styling */
@@ -51,7 +53,7 @@ nav a {
   font-size: 16px;
   color: var(--primary-color);
   text-decoration: none;
-  transition: 0.075s ease-in-out;
+  transition: var(--transition-01);
 }
 
 .menu {
@@ -59,8 +61,15 @@ nav a {
   align-items: center;
 }
 
-.menu img {
+.menu svg {
+  height: 20px;
+  width: 20px;
   margin-right: 0.5rem;
+}
+
+.menu svg path {
+  fill: var(--primary-color);
+  transition: fill var(--transition-01);
 }
 
 .logo {
@@ -86,16 +95,13 @@ nav button,
 }
 
 /* Main */
-/* Heading */
 
-h1 {
+h1 { /* Heading */
   margin: 0 18px 2.875rem;
   font-size: 2.5rem;
 }
 
-/* Paragraaf */
-
-.intro {
+.intro { /* Paragraaf */
   margin: 0 18px 2rem;
   font-size: 120%;
   font-weight: 700;
@@ -128,12 +134,16 @@ h1 {
   flex-wrap: wrap;
   padding: 0.25rem;
   background: var(--tertiary-color);
-  transition: all 3s ease-in-out; /*werkt niet?*/
 }
 
-.tags-small-screen.show {
+.tags-small-screen.show { /* om de filters een transitie te geven als je ze opent */
   display: flex;
   animation: show-tags 0.1s ease-in-out;
+}
+
+.tags-small-screen.hide { /* om de filters een transitie te geven als je ze sluit */
+  display: flex;
+  animation: hide-tags 0.1s ease-in-out;
 }
 
 @keyframes show-tags {
@@ -147,27 +157,37 @@ h1 {
   }
 }
 
+@keyframes hide-tags {
+  from {
+    opacity: 100%;
+    margin-top: 0;
+  }
+  to {
+    opacity: 0;
+    margin-top: -5%;
+  }
+}
+
 .tags-small-screen button,
 .flip-card-back span {
   flex-grow: 1;
   margin: 2px;
   padding: 3px 6px;
-  background-color: #d1d9be;
+  background-color: var(--background-color-01);
   border: none;
   border-radius: 3px;
   font-family: ff-tisa-sans-web-pro, sans-serif;
   font-size: 16px;
   color: var(--secundary-color);
   cursor: pointer;
-  transition: 0.075s ease-in-out;
+  transition: var(--transition-01);
 }
 
 .flip-card-back span {
   display: inline-block;
 }
 
-/* Om +/- te controleren bij filters */
-.hide-filter,
+.hide-filter, /* Om +/- te controleren bij filters */
 .show-filter.hide {
   display: none;
 }
@@ -198,7 +218,6 @@ h1 {
 
 .people .email {
   font-family: ff-tisa-sans-web-pro,sans-serif;
-  /* font-weight: 700; */
   font-size: 120%;
   line-height: 1.5em;
   text-decoration: none;
@@ -209,7 +228,6 @@ h1 {
   height: 250px;
   width: 100%;
   object-fit: cover;
-  /* border-radius: 100% 43% 93% 34% / 93% 81% 93% 78% ; */
   border-radius: 65px 22px 65px 22px;
 }
 
@@ -229,32 +247,22 @@ h1 {
   grid-column-start: 1;
 	grid-row-start: 1;
 	backface-visibility: hidden;
-	transition: 0.5s;
+	transition: transform 0.5s;
 }
-
-/* .card-front-overlay {
-  position: absolute;
-  background: transparent;
-  height: 250px;
-  width: 100%;
-  z-index: 100;
-} */
 
 .flip-card-back {
   rotate: y 180deg;
 }
 
-.flip-card:hover .flip-card-front {
-  rotate: y 180deg;
+.flip-card.hover .flip-card-front { /* class die via JS de card flipped */
+  transform: rotateY(180deg);
 }
 
-.flip-card:hover .flip-card-back {
-  rotate: y 360deg;
+.flip-card.hover .flip-card-back {
+  transform: rotateY(180deg);
 }
 
-/* class om filters in JS te hiden/showen */
-
-.hidden {
+.hidden { /* class om filters in JS te hiden/showen */
   display: none;
 }
 
@@ -262,13 +270,17 @@ h1 {
 
 nav a:hover,
 nav a:focus,
-nav a:active,
+nav a.active,
 nav button:hover,
 nav button:active,
-/* .menu img:hover,
-.menu img:active, */
 .filter:active {
   color: var(--text-color);
+}
+
+.menu:hover svg path,
+.menu:active svg path,
+.menu:focus svg path {
+  fill: var(--text-color);
 }
 
 .email:hover {
@@ -285,7 +297,6 @@ nav button:active,
 @media (min-width: 601px) {
   nav {
     margin: 0 auto;
-    /* padding: 36px 18px 76px; */
   }
 
   .menu {
