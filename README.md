@@ -16,7 +16,8 @@ Tot slot heb ik de foto's een border-radius gegeven om de website een iets infor
 <!-- Voeg een mooie poster visual toe 📸 -->
 ### Visual
 
-![Beige_New_Product_Mockup_Now_Available_Facebook_Post-removebg-preview2](https://github.com/Annevd/the-startup-responsive-interactieve-website/assets/144004647/aed3eed1-639f-4d57-b786-50067e7f3fb5)
+![image-removebg](https://github.com/Annevd/the-startup-responsive-interactieve-website/assets/144004647/a655fbd1-5504-4ad8-b1c4-7c66469b8570)
+
 
 
 <!-- Voeg een link toe naar Github Pages 🌐-->
