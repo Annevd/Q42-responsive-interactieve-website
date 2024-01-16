@@ -185,6 +185,7 @@ h1 { /* Heading */
 
 .flip-card-back span {
   display: inline-block;
+  cursor: default;
 }
 
 .hide-filter, /* Om +/- te controleren bij filters */
