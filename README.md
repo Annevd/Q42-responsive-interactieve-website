@@ -14,11 +14,9 @@ Om meer rust uit te stralen heb ik witruimte gegeven tussen alle collega's. Als 
 Tot slot heb ik de foto's een border-radius gegeven om de website een iets informelere sfeer te geven.
 
 <!-- Voeg een mooie poster visual toe 📸 -->
-### Visual groot scherm
-![image](https://github.com/Annevd/the-startup-responsive-interactieve-website/assets/144004647/acde9d87-030b-4d68-823c-2178a37fc508)
+### Visual
 
-### Visual klein scherm
-![image](https://github.com/Annevd/the-startup-responsive-interactieve-website/assets/144004647/f1b7440d-aa12-4e03-9f42-55f50e3ef007)
+![Beige_New_Product_Mockup_Now_Available_Facebook_Post-removebg-preview2](https://github.com/Annevd/the-startup-responsive-interactieve-website/assets/144004647/aed3eed1-639f-4d57-b786-50067e7f3fb5)
 
 
 <!-- Voeg een link toe naar Github Pages 🌐-->
