@@ -155,26 +155,20 @@ h1 {
   }
 }
 
-/* .flip-card {
-  animation: slide-in 2s ease-in-out forwards;
-}
-
 .slide-in {
-  animation: slide-in 2s ease-in-out forwards;
+  animation: slide-in 0.5s ease-in-out forwards;
 }
 
 @keyframes slide-in {
   from {
     transform: translateX(-100%);
-    transform: rotate(-45deg);
     opacity: 0
   }
   to {
-    transform: translateX(0%);
-    transform: rotate(0deg);
+    transform: translateX(0%);  
     opacity: 1;
   }
-}  */
+} 
 
 .tags-small-screen button,
 .flip-card-back span {

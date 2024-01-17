@@ -49,15 +49,15 @@ function filterPeople(e) { // Functie die alle mensen filtert op basis van het g
   const people = document.querySelectorAll(".flip-card"); // Selecteert alle elementen met de class 'flip-card'
   let filter = e.target.dataset.filter; // Verkrijg de filter waarde van de geklikte filter tags' 'data-filter' attribuut
 
-people.forEach(person => { // Loop door alle mensen heen
-  if (filter === '*' || person.classList.contains(filter)) { // Checkt of het filter "*"/"alles" is of een ander specifiek filter
-    person.classList.remove('hidden'); // Zo ja, verwijder dan de .hidden class met display:none om de foto's te laten zien
-    // people.classList.add('slide-in');
-  } else {
-    person.classList.add('hidden'); // Zo niet, voeg dan de .hidden class met display: none toe om de foto's te verbergen
-    // people.classList.remove('slide-in');
-  }
-});
+  people.forEach(person => { // Loop door alle mensen heen
+    
+    if (filter === '*' || person.classList.contains(filter)) { // Checkt of het filter "*"/"alles" is of een ander specifiek filter
+      person.classList.remove('hidden'); // Zo ja, verwijder dan de .hidden class met display:none om de foto's te laten zien
+      person.classList.add('slide-in'); // Zo ja, voeg de slide in animatie toe
+    } else {
+      person.classList.add('hidden'); // Zo niet, voeg dan de .hidden class met display: none toe om de foto's te verbergen
+    }
+  });
 }
 
 
@@ -76,4 +76,7 @@ const flipCards = document.querySelectorAll('.flip-card');
     card.addEventListener('mouseleave', function () { // Als je muis buiten de foto komt, wordt de hover class weer weggehaald zodat hij terugflipt
       card.classList.remove('hover');
     });
+    card.addEventListener('animationend', function() { // Voegt één keer een eventlistener toe aan álle kaartjes
+      this.classList.remove('slide-in') // Haalt de animatie slide in weg zodat ie daarna weer toegevoegd kan worden
+    })
   });
