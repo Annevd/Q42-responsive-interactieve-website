@@ -7,14 +7,14 @@
 
 body {
   -webkit-font-smoothing: antialiased;
-  color: 	#212121;
+  color: #212121;
   font-family: ff-tisa-sans-web-pro, sans-serif;
   overflow-x: hidden;
 }
 
 :root {
-  --primary-color: #84BC2D;
-  --secundary-color:#7f9054;
+  --primary-color: #84bc2d;
+  --secundary-color: #7f9054;
   --tertiary-color: #f3f5ee;
   --text-color: #212121;
   --background-color-01: #d1d9be;
@@ -96,12 +96,14 @@ nav button,
 
 /* Main */
 
-h1 { /* Heading */
+h1 {
+  /* Heading */
   margin: 0 18px 2.875rem;
   font-size: 2.5rem;
 }
 
-.intro { /* Paragraaf */
+.intro {
+  /* Paragraaf */
   margin: 0 18px 2rem;
   font-size: 120%;
   font-weight: 700;
@@ -136,14 +138,10 @@ h1 { /* Heading */
   background: var(--tertiary-color);
 }
 
-.tags-small-screen.show { /* om de filters een transitie te geven als je ze opent */
+.tags-small-screen.show-tags {
+  /* om de filters een transitie te geven als je ze opent */
   display: flex;
   animation: show-tags 0.1s ease-in-out;
-}
-
-.tags-small-screen.hide { /* om de filters een transitie te geven als je ze sluit */
-  display: flex;
-  animation: hide-tags 0.1s ease-in-out;
 }
 
 @keyframes show-tags {
@@ -157,16 +155,26 @@ h1 { /* Heading */
   }
 }
 
-@keyframes hide-tags {
+/* .flip-card {
+  animation: slide-in 2s ease-in-out forwards;
+}
+
+.slide-in {
+  animation: slide-in 2s ease-in-out forwards;
+}
+
+@keyframes slide-in {
   from {
-    opacity: 100%;
-    margin-top: 0;
+    transform: translateX(-100%);
+    transform: rotate(-45deg);
+    opacity: 0
   }
   to {
-    opacity: 0;
-    margin-top: -5%;
+    transform: translateX(0%);
+    transform: rotate(0deg);
+    opacity: 1;
   }
-}
+}  */
 
 .tags-small-screen button,
 .flip-card-back span {
@@ -189,13 +197,18 @@ h1 { /* Heading */
 }
 
 .hide-filter, /* Om +/- te controleren bij filters */
-.show-filter.hide {
+.show-filter.hide-plus {
   display: none;
 }
 
-.hide-filter.show,
+.hide-filter.show-minus,
 .show-filter {
   display: inline;
+}
+
+.hidden {
+  /* class om filters in JS te hiden/showen */
+  display: none;
 }
 
 /* Collega's */
@@ -203,10 +216,10 @@ h1 { /* Heading */
 .people {
   display: grid;
   grid-gap: 2rem;
-  grid-template-columns: repeat(auto-fill,minmax(158px,1fr));
+  grid-template-columns: repeat(auto-fill, minmax(158px, 1fr));
   max-width: 1440px;
   padding: 0 18px;
-  margin-bottom: 76px; 
+  margin-bottom: 76px;
 }
 
 .people .first-name {
@@ -218,7 +231,7 @@ h1 { /* Heading */
 }
 
 .people .email {
-  font-family: ff-tisa-sans-web-pro,sans-serif;
+  font-family: ff-tisa-sans-web-pro, sans-serif;
   font-size: 120%;
   line-height: 1.5em;
   text-decoration: none;
@@ -246,25 +259,22 @@ h1 { /* Heading */
 .flip-card-front,
 .flip-card-back {
   grid-column-start: 1;
-	grid-row-start: 1;
-	backface-visibility: hidden;
-	transition: transform 0.5s;
+  grid-row-start: 1;
+  backface-visibility: hidden;
+  transition: transform 0.5s;
 }
 
 .flip-card-back {
   rotate: y 180deg;
 }
 
-.flip-card.hover .flip-card-front { /* class die via JS de card flipped */
+.flip-card.hover .flip-card-front {
+  /* class die via JS de card flipped */
   transform: rotateY(180deg);
 }
 
 .flip-card.hover .flip-card-back {
   transform: rotateY(180deg);
-}
-
-.hidden { /* class om filters in JS te hiden/showen */
-  display: none;
 }
 
 /* Hovers, focus & active*/
@@ -291,9 +301,14 @@ nav button:active,
 .tags-small-screen button:hover,
 .tags-small-screen button:focus,
 .tags-small-screen button:active {
-  background: #FFFF;
+  background: #ffff;
   color: var(--text-color);
 }
+
+/* .tags-small-screen button.focused {
+  background: #FFFF;
+  color: var(--text-color);
+} */
 
 @media (min-width: 601px) {
   nav {
@@ -346,7 +361,7 @@ nav button:active,
   }
 
   .people {
-    grid-template-columns: repeat(auto-fill,minmax(225px,1fr));
+    grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
     margin: 0 auto 76px;
   }
 }
