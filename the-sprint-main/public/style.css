@@ -138,8 +138,7 @@ h1 {
   background: var(--tertiary-color);
 }
 
-.tags-small-screen.show-tags {
-  /* om de filters een transitie te geven als je ze opent */
+.tags-small-screen.show-tags { /* om de filters een transitie te geven als je ze opent */
   display: flex;
   animation: show-tags 0.1s ease-in-out;
 }
