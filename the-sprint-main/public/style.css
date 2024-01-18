@@ -38,6 +38,32 @@ li {
   list-style: none;
 }
 
+/* Skip to content link */
+
+a.skip-main {
+  position: absolute;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  left: -999px;
+  overflow: hidden;
+  z-index: -999;
+  font-family: proxima-nova,sans-serif;
+  font-weight: 600;
+  color: var(--primary-color);
+  text-decoration: none ;
+}
+
+a.skip-main:active, a.skip-main:focus {
+  height: auto;
+  left: 10px;
+  overflow: auto;
+  padding: 5px 10px;
+  top: 10px;
+  width: auto;
+  z-index: 999;
+}
+
 /* Navigatie */
 
 nav {
@@ -77,6 +103,11 @@ nav a {
   width: 53px;
 }
 
+canvas {
+  height: 80px;
+  width: 53px;
+}
+
 .left-links,
 .right-links {
   display: none;
@@ -96,14 +127,12 @@ nav button,
 
 /* Main */
 
-h1 {
-  /* Heading */
+h1 { /* Heading */
   margin: 0 18px 2.875rem;
   font-size: 2.5rem;
 }
 
-.intro {
-  /* Paragraaf */
+.intro { /* Paragraaf */
   margin: 0 18px 2rem;
   font-size: 120%;
   font-weight: 700;
@@ -175,7 +204,7 @@ h1 {
   margin: 2px;
   padding: 3px 6px;
   background-color: var(--background-color-01);
-  border: none;
+  border: 2px solid transparent;
   border-radius: 3px;
   font-family: ff-tisa-sans-web-pro, sans-serif;
   font-size: 16px;
@@ -199,8 +228,7 @@ h1 {
   display: inline;
 }
 
-.hidden {
-  /* class om filters in JS te hiden/showen */
+.hidden { /* class om filters in JS te hiden/showen */
   display: none;
 }
 
@@ -261,8 +289,7 @@ h1 {
   rotate: y 180deg;
 }
 
-.flip-card.hover .flip-card-front {
-  /* class die via JS de card flipped */
+.flip-card.hover .flip-card-front { /* class die via JS de card flipped */
   transform: rotateY(180deg);
 }
 
@@ -302,6 +329,8 @@ nav button:active,
   background: #FFFF;
   color: var(--text-color);
 } */
+
+/* Media query */
 
 @media (min-width: 601px) {
   nav {
@@ -362,5 +391,36 @@ nav button:active,
 @media (min-width: 720px) {
   .people {
     padding: 0 2rem;
+  }
+}
+
+/* Dark mode */
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #41453B;
+    color: #EEEEEE;
+  }
+
+  nav a:hover, 
+  nav a:focus, 
+  nav a.active, 
+  nav button:hover, 
+  nav button:active, 
+  .filter:active {
+    color: #EEEEEE;
+  }
+
+.tags-small-screen {
+  background: #2F312A;
+  }
+
+.tags-small-screen button,
+.flip-card-back span {
+  color: var(--text-color);
+  }
+
+.people .first-name {
+  color: #EEEEEE;
   }
 }
