@@ -16,30 +16,7 @@ filterButton.addEventListener("click", function() {
 // Filter
 
 const filterButtons = document.querySelectorAll('.filter-option');  // Selecteert alle elementen met de class 'filter-option'
-// let currentFilter = null;
-
-// filterButtons.forEach(button => {
-//   button.addEventListener('click', function(e) {
-//     if (currentFilter === e.target) {
-//       // Clicked on the currently focused filter, remove focus and reset currentFilter
-//       currentFilter.classList.remove('focused');
-//       currentFilter = null;
-//       filterPeople({ target: { dataset: { filter: '*' } }}); // Reset filter to show all
-//     } else {
-//       // Remove focus from the previously focused filter
-//       if (currentFilter) {
-//         currentFilter.classList.remove('focused');
-//       }
-
-//       // Update the current filter and add focus
-//       currentFilter = e.target;
-//       currentFilter.classList.add('focused');
-//     }
-
-//     filterPeople(e);
-//   });
-// });
-
+const allButton = document.querySelector('.filter-option:first-of-type');
 
 filterButtons.forEach(button => { // Voegt een click eventlistener toe aan alle filter tags
   button.addEventListener('click', filterPeople);
@@ -47,7 +24,26 @@ filterButtons.forEach(button => { // Voegt een click eventlistener toe aan alle 
 
 function filterPeople(e) { // Functie die alle mensen filtert op basis van het geklikte filter knopje
   const people = document.querySelectorAll(".flip-card"); // Selecteert alle elementen met de class 'flip-card'
-  let filter = e.target.dataset.filter; // Verkrijg de filter waarde van de geklikte filter tags' 'data-filter' attribuut
+  let filter; // Verkrijg de filter waarde van de geklikte filter tags' 'data-filter' attribuut
+  const filterButton = e.target;
+
+  if (filterButton.classList.contains('focused')) {
+    
+    allButton.classList.add('focused');
+    filterButton.classList.remove('focused');
+    filter = '*';
+  }
+
+  else {
+    let currentButton = document.querySelector(".focused");
+    filter = e.target.dataset.filter;
+
+    if (currentButton){
+      currentButton.classList.remove('focused');
+    }
+
+    filterButton.classList.add('focused');
+  }
 
   people.forEach(person => { // Loop door alle mensen heen
     
@@ -68,6 +64,7 @@ const flipCards = document.querySelectorAll('.flip-card');
   flipCards.forEach(function (card) { // Voegt een click eventlistener toe aan alle flip cards
 
     const personImage = card.querySelector('.person'); // selecteert de foto in de card
+    const cardBack = card.querySelector('.flip-card-back');
 
     personImage.addEventListener('mouseenter', function () { // Luistert naar de funcite zodra je muis de foto 'binnendringt'
       card.classList.add('hover'); // Voegt de hover class toe om te kunnen flippen
@@ -76,6 +73,15 @@ const flipCards = document.querySelectorAll('.flip-card');
     card.addEventListener('mouseleave', function () { // Als je muis buiten de foto komt, wordt de hover class weer weggehaald zodat hij terugflipt
       card.classList.remove('hover');
     });
+
+    personImage.addEventListener('click', function () { // Luistert naar de funcite zodra je muis de foto 'binnendringt'
+      card.classList.add('click'); // Voegt de hover class toe om te kunnen flippen
+    });
+
+    cardBack.addEventListener('click', function () { // Als je muis buiten de foto komt, wordt de hover class weer weggehaald zodat hij terugflipt
+      card.classList.remove('click');
+    });
+
     card.addEventListener('animationend', function() { // Voegt één keer een eventlistener toe aan álle kaartjes
       this.classList.remove('slide-in') // Haalt de animatie slide in weg zodat ie daarna weer toegevoegd kan worden
     })
