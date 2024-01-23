@@ -158,33 +158,19 @@ h1 { /* Heading */
 }
 
 .tags-small-screen {
-  /* display: none; */
   display: flex;
   flex-wrap: wrap;
   padding: 0 0.25rem;
   background: var(--tertiary-color);
   max-height:0;
   opacity: 0;
-  transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out; /* om de filters een transitie te geven als je ze opent */
 }
 
 .tags-small-screen.show-tags { /* om de filters een transitie te geven als je ze opent */
-  /* display: flex; */
-  /* animation: show-tags 0.1s ease-in-out; */
   padding: 0.25rem;
   max-height: 10.5rem;
   opacity: 1;
-}
-
-@keyframes show-tags {
-  from {
-    opacity: 0;
-    margin-top: -5%;
-  }
-  to {
-    opacity: 100%;
-    margin-top: 0;
-  }
 }
 
 .slide-in {
@@ -323,14 +309,14 @@ nav button:active,
 }
 
 .tags-small-screen button:hover,
-/* .tags-small-screen button:focus, */
-.tags-small-screen button:active {
+.tags-small-screen button:active,
+.tags-small-screen button:focus-visible {
   background: #fff;
   color: var(--text-color);
 }
 
-.tags-small-screen button.focused {
-  background: #FFFF;
+.tags-small-screen button.focused {/* Om met JS een focus te geven*/
+  background: #FFFF; 
   color: var(--text-color);
 }
 

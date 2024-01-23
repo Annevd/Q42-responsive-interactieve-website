@@ -15,43 +15,40 @@ filterButton.addEventListener("click", function() {
 
 // Filter
 
-const filterButtons = document.querySelectorAll('.filter-option');  // Selecteert alle elementen met de class 'filter-option'
-const allButton = document.querySelector('.filter-option:first-of-type');
+const filterButtons = document.querySelectorAll(".filter-option"); // Selecteer alle elementen met de class 'filter-option'
+const allButton = document.querySelector(".filter-option:first-of-type"); // Selecteer de knop "Zie iedereen"
 
-filterButtons.forEach(button => { // Voegt een click eventlistener toe aan alle filter tags
-  button.addEventListener('click', filterPeople);
+filterButtons.forEach((button) => { // Voeg een click eventlistener toe aan alle filter knoppen
+  button.addEventListener("click", filterPeople); // Wanneer er wordt geklikt, roep dan de functie 'filterPeople' aan
 });
 
-function filterPeople(e) { // Functie die alle mensen filtert op basis van het geklikte filter knopje
-  const people = document.querySelectorAll(".flip-card"); // Selecteert alle elementen met de class 'flip-card'
-  let filter; // Verkrijg de filter waarde van de geklikte filter tags' 'data-filter' attribuut
-  const filterButton = e.target;
+function filterPeople(e) { // Functie om mensen te filteren op basis van het geklikte filter knopje
+  const people = document.querySelectorAll(".flip-card"); // Selecteer alle elementen met de class 'flip-card'
+  let filter;
+  const filterButton = e.target; // 'e.target' is het element dat is geklikt
 
-  if (filterButton.classList.contains('focused')) {
-    
-    allButton.classList.add('focused');
-    filterButton.classList.remove('focused');
-    filter = '*';
-  }
+  if (filterButton.classList.contains("focused")) { // Als de geklikte knop al gefocust is,
+    allButton.classList.add("focused"); // Voeg dan de focus class toe aan de "Zie iedereen" knop,
+    filterButton.classList.remove("focused"); // en verwijder de focus class van de geklikte filter knop
+    filter = "*"; // Stel het filter in op "*" om iedereen weer te geven
+  } else {
+    let currentButton = document.querySelector(".focused"); // Zo niet, selecteer de momenteel gefocuste knop
+    filter = e.target.dataset.filter; // Krijg de filterwaarde uit het 'data-filter' attribuut van de geklikte filter knop
 
-  else {
-    let currentButton = document.querySelector(".focused");
-    filter = e.target.dataset.filter;
-
-    if (currentButton){
-      currentButton.classList.remove('focused');
+    if (currentButton) {
+      currentButton.classList.remove("focused"); // Als er al een gefocuste knop is, verwijder dan de focus class ervan
     }
 
-    filterButton.classList.add('focused');
+    filterButton.classList.add("focused"); // Voeg focus toe aan de geklikte filter knop
   }
 
-  people.forEach(person => { // Loop door alle mensen heen
-    
-    if (filter === '*' || person.classList.contains(filter)) { // Checkt of het filter "*"/"alles" is of een ander specifiek filter
-      person.classList.remove('hidden'); // Zo ja, verwijder dan de .hidden class met display:none om de foto's te laten zien
-      person.classList.add('slide-in'); // Zo ja, voeg de slide in animatie toe
+  people.forEach((person) => { // Loop door alle personen heen
+
+    if (filter === "*" || person.classList.contains(filter)) { // Als het filter "*" is (alles) of de persoon het geselecteerde filter heeft,
+      person.classList.remove("hidden"); // Verwijder dan de 'hidden' class om de foto's zichtbaar te maken
+      person.classList.add("slide-in"); // Voeg de 'slide-in' animatie class toe
     } else {
-      person.classList.add('hidden'); // Zo niet, voeg dan de .hidden class met display: none toe om de foto's te verbergen
+      person.classList.add("hidden"); // Zo niet, voeg dan de 'hidden' class toe om de foto's te verbergen
     }
   });
 }
