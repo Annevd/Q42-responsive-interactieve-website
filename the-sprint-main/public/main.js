@@ -71,11 +71,11 @@ const flipCards = document.querySelectorAll('.flip-card');
       card.classList.remove('hover');
     });
 
-    personImage.addEventListener('click', function () { // Luistert naar de funcite zodra je muis de foto 'binnendringt'
-      card.classList.add('click'); // Voegt de hover class toe om te kunnen flippen
+    personImage.addEventListener('click', function () { // Luistert naar de funcite zodra je op de foto klikt
+      card.classList.add('click'); // Voegt de click class toe om te kunnen flippen
     });
 
-    cardBack.addEventListener('click', function () { // Als je muis buiten de foto komt, wordt de hover class weer weggehaald zodat hij terugflipt
+    cardBack.addEventListener('click', function () { // Als je nog een keer klikt, wordt de click class weer weggehaald zodat hij terugflipt
       card.classList.remove('click');
     });
 
