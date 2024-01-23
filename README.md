@@ -8,7 +8,7 @@ Ontwerp en maak een responsive website voor een startup.
 <!-- In de Beschrijving staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
 Voor deze opdracht moesten we een pagina bouwen voor de Q42 website. Op deze website wil Q42 graag met trots al hun collega's tonen aan de buitenwereld. Het is de bedoeling dat we via een volledig responsive grid alle Q'ers tonen van twee kanten: een serieuze kant en een speelse kant. Ook is het de bedoeling voor de bezoekers van Q42 om te kunnen filteren, om zo een specifieke groep in beeld te krijgen.
 
-Op mijn website heb ik hetzelfde navigatie en layout design als de originele Q42 website. Het verschil komt ná de introtekst. 
+Op mijn website heb ik hetzelfde navigatie en layout design als de originele Q42 website. Het verschil komt ná de introtekst. Om te beginnen is er een skip to content knop aanwezig om de navigatie over te slaan en direct naar de content te springen.
 Ik heb ervoor gekozen om de filters op een groot scherm boven de foto's te plaatsen, op een klein scherm zijn deze filters in en uitklapbaar om drukte te beperken. Via deze filters kan je filteren op verschillende dingen zoals "Harry Potter fan", "Short hair don't care", etc.
 Om meer rust uit te stralen heb ik witruimte gegeven tussen alle collega's. Als serieuze kant van de collega's staat hun portret weergeven met daaronder hun naam en emailadres, en als speelse kant staat een foto van de collega's in disney stijl met de filters die bij hen horen.
 Tot slot heb ik de foto's een border-radius gegeven om de website een iets informelere sfeer te geven.
