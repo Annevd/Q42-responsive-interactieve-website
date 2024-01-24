@@ -308,13 +308,6 @@ nav button:active,
   text-decoration: underline;
 }
 
-.tags-small-screen button:hover,
-.tags-small-screen button:active,
-.tags-small-screen button:focus-visible {
-  background: #fff;
-  color: var(--text-color);
-}
-
 .tags-small-screen button.focused {/* Om met JS een focus te geven*/
   background: #FFFF; 
   color: var(--text-color);
@@ -386,6 +379,12 @@ nav button:active,
   
   .flip-card.hover .flip-card-back {
     transform: rotateY(180deg);
+  }
+
+  .tags-small-screen button:hover,
+  .tags-small-screen button:focus-visible {
+    background: #fff;
+    color: var(--text-color);
   }
 
 }
