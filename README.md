@@ -4,6 +4,13 @@
 <!-- Geef je project een titel en schrijf in één zin wat het is -->
 Ontwerp en maak een responsive website voor een startup.
 
+## Inhoudsopgave
+
+- [Beschrijving]()
+- [Visual]()
+- [Kenmerken]()
+- [Licentie]()
+
 ## Beschrijving
 <!-- In de Beschrijving staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
 Voor deze opdracht moesten we een pagina bouwen voor de Q42 website. Op deze website wil Q42 graag met trots al hun collega's tonen aan de buitenwereld. Het is de bedoeling dat we via een volledig responsive grid alle Q'ers tonen van twee kanten: een serieuze kant en een speelse kant. Ook is het de bedoeling voor de bezoekers van Q42 om te kunnen filteren, om zo een specifieke groep in beeld te krijgen.
@@ -14,7 +21,7 @@ Om meer rust uit te stralen heb ik witruimte gegeven tussen alle collega's. Als 
 Tot slot heb ik de foto's een border-radius gegeven om de website een iets informelere sfeer te geven.
 
 <!-- Voeg een mooie poster visual toe 📸 -->
-### Visual
+## Visual
 
 ![image-removebg](https://github.com/Annevd/the-startup-responsive-interactieve-website/assets/144004647/a655fbd1-5504-4ad8-b1c4-7c66469b8570)
 
