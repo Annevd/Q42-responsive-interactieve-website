@@ -6,10 +6,10 @@ Ontwerp en maak een responsive website voor een startup.
 
 ## Inhoudsopgave
 
-- [Beschrijving]()
-- [Visual]()
-- [Kenmerken]()
-- [Licentie]()
+- [Beschrijving](https://github.com/Annevd/the-startup-responsive-interactieve-website/blob/main/README.md#beschrijving)
+- [Visual](https://github.com/Annevd/the-startup-responsive-interactieve-website/blob/main/README.md#visual)
+- [Kenmerken](https://github.com/Annevd/the-startup-responsive-interactieve-website/blob/main/README.md#kenmerken)
+- [Licentie](https://github.com/Annevd/the-startup-responsive-interactieve-website/blob/main/README.md#licentie)
 
 ## Beschrijving
 <!-- In de Beschrijving staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
