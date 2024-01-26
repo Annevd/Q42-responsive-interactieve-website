@@ -34,7 +34,12 @@ Tot slot heb ik de foto's een border-radius gegeven om de website een iets infor
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met JS gedaan en hoe? -->
 De belangrijkste kenmerken en technieken voor deze pagina zijn CSS Grid met auto-fill en de meerdere functionaliteiten in Javascript zoals het in-en-uitklapbare filter, het filtersysteem zelf en het omdraaien van de fotokaartjes. Hiervoor heb ik onder andere het Javascript driestappenplan gebruikt zoals document.querySelectorAll, EventListeners, ...classList.toggle/add/remove etc.
 
+## QR Code
+
+![frame](https://github.com/Annevd/Q42-responsive-interactieve-website/assets/144004647/be752faf-5060-4455-862f-bafa37688d7a)
+
 ## Licentie
 
 This project is licensed under the terms of the [MIT license](./LICENSE).
+
 
